@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertTrue;
 public class PlayerTest {
 
     @Test
-    public void 플레이어는_히드머니를_가지고_생성할수있다() {
+    public void 플레이어는_시드머니를_가지고_생성할수있다() {
         Player player = new Player(5000);
         int balance = player.getBalance();
         assertTrue(balance == 5000);
