@@ -20,4 +20,6 @@ public class CardTest {
     public void 카드의_랭크는_13_이하여야한다() {
         Card card = new Card(15, Suit.SPADE);
     }
+
+
 }
