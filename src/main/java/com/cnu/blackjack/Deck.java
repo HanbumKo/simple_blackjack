@@ -21,6 +21,7 @@ public class Deck {
                 }
             }
         }
+        shuffle();
     }
 
     public int getTotalCardCount() {
@@ -34,7 +35,7 @@ public class Deck {
         return cardList.remove(0);
     }
 
-    public void shuffle() {
+    private void shuffle() {
         Random random = new Random();
         int randomIndexNumber;
         for( int i=0 ; i<cardList.size()*8 ; i++ ) {
