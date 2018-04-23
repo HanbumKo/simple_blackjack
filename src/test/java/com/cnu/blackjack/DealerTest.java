@@ -14,12 +14,7 @@ public class DealerTest {
         assertTrue(score > 17 && score < 25);
     }
 
-    @Test
-    public void 딜러는_카드를_한장_보여준다() {
-        Deck deck = new Deck(2);
-        Dealer dealer = new Dealer(deck);
-        dealer.showOneCard();
-    }
+
 
 
 }

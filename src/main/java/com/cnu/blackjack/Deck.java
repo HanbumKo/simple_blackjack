@@ -1,11 +1,13 @@
 package com.cnu.blackjack;
 
 import com.cnu.blackjack.exception.noMoreCardException;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Data
 public class Deck {
 
     private int numberOfDeck;
@@ -46,9 +48,4 @@ public class Deck {
         }
     }
 
-    public void showAllCardsList() {
-        for( int i=0 ; i<cardList.size() ; i++ ) {
-            System.out.println(cardList.get(i).getRankToString() + "    " + cardList.get(i).getSuitToString());
-        }
-    }
 }

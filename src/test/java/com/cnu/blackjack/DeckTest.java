@@ -43,7 +43,6 @@ public class DeckTest {
     @Test
     public void 카드가_섞여야_한다() {
         Deck deck = new Deck(1);
-        deck.showAllCardsList();
         Card card1, card2, card3;
         card1 = deck.drawCard();
         card2 = deck.drawCard();

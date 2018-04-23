@@ -30,12 +30,5 @@ public class Dealer {
         return score;
     }
 
-    /*
-    Dealer must show a one card from dealerHand.
-    In this, show card index 0
-     */
-    public void showOneCard() {
-        System.out.println(dealerHand.getHandList().get(0).getRankToString() + "    " + dealerHand.getHandList().get(0).getSuitToString());
-    }
 
 }
