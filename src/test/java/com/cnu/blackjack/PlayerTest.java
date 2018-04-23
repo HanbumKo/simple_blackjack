@@ -1,5 +1,6 @@
 package com.cnu.blackjack;
 
+import com.cnu.blackjack.exception.NoEnoughBalanceException;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -21,7 +22,7 @@ public class PlayerTest {
         assertTrue(bat == 2000);
     }
 
-    @Test(expected = Exception.class)
+    @Test(expected = NoEnoughBalanceException.class)
     public void 플레이어는_가진돈보다_많이_배팅할수없다() {
         Player player = new Player(5000);
         player.placeBet(10000);
