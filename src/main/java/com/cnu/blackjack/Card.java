@@ -17,8 +17,8 @@ public class Card {
         this.suit = suit;
     }
 
-    public String getRankToString(Card card) {
-        switch( card.getRank() ) {
+    public String getRankToString() {
+        switch( this.rank ) {
             case 1: return "Rank : 1";
             case 2: return "Rank : 2";
             case 3: return "Rank : 3";
@@ -36,8 +36,8 @@ public class Card {
         }
     }
 
-    public String getSuitToString(Card card) {
-        switch( card.getSuit() ) {
+    public String getSuitToString() {
+        switch( this.getSuit() ) {
             case DIAMOND: return "Suit : DIAMOND";
             case SPADE:   return "Suit : SPADE";
             case CLUB:    return "Suit : CLUB";

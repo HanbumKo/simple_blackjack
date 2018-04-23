@@ -51,14 +51,14 @@ public class CardTest {
     @Test
     public void 랭크를_스트링으로_변환할수있다() {
         Card card1 = new Card(1, Suit.DIAMOND);
-        String stringOfCard1 = card1.getRankToString(card1);
+        String stringOfCard1 = card1.getRankToString();
         assertTrue(stringOfCard1 instanceof String);
     }
 
     @Test
     public void 카드타입을_스트링으로_변환할수있다() {
         Card card1 = new Card(1, Suit.DIAMOND);
-        String stringOfCard1 = card1.getSuitToString(card1);
+        String stringOfCard1 = card1.getSuitToString();
         assertTrue(stringOfCard1 instanceof String);
     }
 
