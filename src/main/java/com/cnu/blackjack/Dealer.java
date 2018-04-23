@@ -10,7 +10,7 @@ public class Dealer {
     private Hand dealerHand;
 
     /*
-    In contructor, first, dealer draw two cards from deck.
+    In constructor, first, dealer draw two cards from deck.
     If score is less equal than 16, draw card until the score is higher than 16.
      */
     public Dealer(Deck deck) {
