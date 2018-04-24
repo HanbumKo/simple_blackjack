@@ -33,7 +33,8 @@ public class PlayerTest {
 
     @Test
     public void 플레이어는_스코어를_계산할수있다() {
-        Player player = new Player(5000);
+        Deck deck = new Deck(2);
+        Player player = new Player(5000, deck);
         int playerScore = player.getScore();
         System.out.println(playerScore);
     }
