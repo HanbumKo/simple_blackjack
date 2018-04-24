@@ -15,11 +15,6 @@ public class Dealer {
      */
     public Dealer(Deck deck) {
         this.dealerHand = new Hand(deck);
-        dealerHand.drawCard();
-        dealerHand.drawCard();
-        while( getScore()<=16 ) {
-            dealerHand.drawCard();
-        }
     }
 
     public int getScore() {
