@@ -13,6 +13,7 @@ public class Player {
 
     public Player(int balance, Deck deck) {
         this.balance = balance;
+        this.playerHand = new Hand(deck);
         playerHand = new Hand(deck);
 
     }
@@ -27,9 +28,19 @@ public class Player {
 
     public int getScore() {
         int score = 0;
+      
+        for(int i = 0; playerHand.getCurrentHandSize() > i; i++ ) {
+
         for( int i=0 ; i<playerHand.getCurrentHandSize() ; i++ ) {
+
             score += playerHand.getHandList().get(i).getRank();
         }
         return score;
+    }
+
+    public void showAllCards() {
+        for( int i=0 ; playerHand.getCurrentHandSize() > i ; i++ ) {
+            System.out.println(playerHand.getHandList().get(i).getRankToString() + "    " + playerHand.getHandList().get(i).getSuitToString());
+        }
     }
 }
