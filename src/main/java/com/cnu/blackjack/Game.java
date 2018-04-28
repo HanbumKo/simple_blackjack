@@ -37,6 +37,11 @@ public class Game {
             playerList.add(new Player(50000, this.deck));
         }
     }
+    
+    public Boolean addGamer() {
+        numberOfGamer++;
+        return playerList.add(new Player(50000, deck));
+    }
 
     // Game Play
     public void playBlackjack() {
@@ -56,18 +61,11 @@ public class Game {
             return;
         }
 
-
         dealerShowOneCard();
         showPlayersCard();
         showOtherPlayersCard();
         askPlayerHitOrStand();
 
-    }
-
-    // public methods
-    public Boolean addGamer() {
-        numberOfGamer++;
-        return playerList.add(new Player(50000, deck));
     }
 
     // private methods

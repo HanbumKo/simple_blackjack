@@ -38,4 +38,35 @@ public class PlayerTest {
         int playerScore = player.getScore();
         System.out.println(playerScore);
     }
+
+    @Test
+    public void 플레이어의_초기_상태는_ALIVE이다() {
+        Player player = new Player(5000, new Deck(1));
+        Status player_status = player.getStatus();
+        assertTrue(player_status == Status.ALIVE);
+    }
+
+    @Test
+    public void 플레이어는_hit을_하면_카드개수가_1장이_늘어난다() {
+        Player player = new Player(5000, new Deck(1)); // 새로 만들어진 플레이어는 0장의 카드를 가짐
+        player.hit();
+        int numberOfCard = player.getPlayerHand().getHandList().size();
+        assertTrue(numberOfCard == 1);
+    }
+
+    @Test
+    public void 플레이어는_stand를_하면_상태가_STOP이_된다() {
+        Player player = new Player(5000, new Deck(1));
+        player.stand();
+        Status player_status = player.getStatus();
+        assertTrue(player_status == Status.STOP);
+    }
+
+    @Test
+    public void 플레이어의_상태를_DEATH로_바꿀_수_있다() {
+        Player player = new Player(5000, new Deck(1));
+        player.set_status_if_bust();
+        Status player_status = player.getStatus();
+        assertTrue(player_status == Status.DEATH);
+    }
 }
