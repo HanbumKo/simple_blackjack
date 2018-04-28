@@ -56,7 +56,7 @@ public class SituationTest {
         player.getHand().getHandList().add(new Card(10, Suit.SPADE));
         player.getHand().getHandList().add(new Card(10, Suit.SPADE));
 
-        assertTrue(Situation.check_bust(player) == true);
+        assertTrue(Situation.is_bust(player) == true);
     }
 
     @Test
@@ -65,6 +65,6 @@ public class SituationTest {
         dealer.getHand().getHandList().add(new Card(10, Suit.SPADE));
         dealer.getHand().getHandList().add(new Card(10, Suit.SPADE));
 
-        assertTrue(Situation.check_bust(dealer) == true);
+        assertTrue(Situation.is_bust(dealer) == true);
     }
 }

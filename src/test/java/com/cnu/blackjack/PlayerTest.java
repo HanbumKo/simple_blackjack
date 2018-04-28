@@ -67,6 +67,6 @@ public class PlayerTest {
         Player player = new Player(5000, new Deck(1));
         player.set_status_if_bust();
         Status player_status = player.getStatus();
-        assertTrue(player_status == Status.DEATH);
+        assertTrue(player_status == Status.BUST);
     }
 }

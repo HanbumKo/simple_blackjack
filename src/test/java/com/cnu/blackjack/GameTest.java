@@ -1,6 +1,10 @@
 package com.cnu.blackjack;
 
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 
@@ -33,12 +37,10 @@ public class GameTest {
         assertTrue(numberOfGamer==2);
     }
 
-
     // Game processing
     @Test
     public void 게임진행() {
         Game game = new Game();
         game.playBlackjack();
     }
-
 }

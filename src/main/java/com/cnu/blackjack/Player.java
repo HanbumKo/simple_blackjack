@@ -25,12 +25,6 @@ public class Player extends Person {
         this.currentBet = bet;
     }
 
-    public void showAllCards() {
-        for( int i=0 ; hand.getCurrentHandSize() > i ; i++ ) {
-            System.out.println(hand.getHandList().get(i).getRankToString() + "    " + hand.getHandList().get(i).getSuitToString());
-        }
-    }
-
     public Status getStatus() {
         return status;
     }
@@ -45,6 +39,6 @@ public class Player extends Person {
     }
 
     public void set_status_if_bust() {
-        this.status = Status.DEATH;
+        this.status = Status.BUST;
     }
 }

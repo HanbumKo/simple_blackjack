@@ -14,8 +14,11 @@ public abstract class Person {
     public Hand getHand() {
         return this.hand;
     }
+    
 
-    public void setHand(Hand hand) {
-        this.hand = hand;
+    public void showAllCards() {
+        for( int i=0 ; hand.getCurrentHandSize() > i ; i++ ) {
+            System.out.println(hand.getHandList().get(i).getRankToString() + "    " + hand.getHandList().get(i).getSuitToString());
+        }
     }
 }
