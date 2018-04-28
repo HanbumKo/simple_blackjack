@@ -16,15 +16,22 @@ public class Game {
     // Constructor
     public Game() {
         playerList = new ArrayList<>();
+        default_setting();
         dealer = new Dealer(this.deck);
+
     }
 
     // Game Setting (The number of Deck and Player)
-    public void setNumberOfDeck(int numberOfDeck) {
+    public void default_setting() {
+        set_NumberOfDeck(1);
+        set_NumberOfGamer(1);
+    }
+
+    public void set_NumberOfDeck(int numberOfDeck) {
         this.deck = new Deck(numberOfDeck);
     }
 
-    public void setNumberOfGamer(int numberOfGamer) {
+    public void set_NumberOfGamer(int numberOfGamer) {
         this.numberOfGamer = numberOfGamer;
         for( int i=1 ; i<=numberOfGamer ; i++ ) {
             playerList.add(new Player(50000, this.deck));
