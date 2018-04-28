@@ -38,8 +38,6 @@ public class GameTest {
         game.playBlackjack();
     }
 
-
-
     @Test
     public void 플레이어가_HIT를_하면_카드를_한장받는다(){
         Game game = new Game();
@@ -49,4 +47,5 @@ public class GameTest {
             game.askPlayerHitOrStand(i, HitOrStand);
         }
     }
+
 }
