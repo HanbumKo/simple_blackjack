@@ -9,7 +9,8 @@ public class GameTest {
 
     @Test
     public void 게임인원을_설정할수_있다() {
-        Game game = new Game(2, 2);
+        Game game = new Game();
+
         int numberOfGamer = game.getNumberOfGamer();
         assertTrue(numberOfGamer==2);
     }
@@ -28,8 +29,5 @@ public class GameTest {
         game.playBlackjack();
     }
 
-    @Test
-    public void 플레이어1의_턴이_끝나면_플레이어2의_턴으로_넘어간다() {
 
-    }
 }

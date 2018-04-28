@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class Game {
-
+    
     private int numberOfGamer;
     private Deck deck;
     private List<Player> playerList;
@@ -14,16 +14,22 @@ public class Game {
 
 
     // Constructor
-    public Game(int numberOfGamer, int numberOfDeck) {
-        this.numberOfGamer = numberOfGamer;
-        this.deck = new Deck(numberOfDeck);
+    public Game() {
         playerList = new ArrayList<>();
         dealer = new Dealer(this.deck);
+    }
+
+    // Game Setting (The number of Deck and Player)
+    public void setNumberOfDeck(int numberOfDeck) {
+        this.deck = new Deck(numberOfDeck);
+    }
+
+    public void setNumberOfGamer(int numberOfGamer) {
+        this.numberOfGamer = numberOfGamer;
         for( int i=1 ; i<=numberOfGamer ; i++ ) {
             playerList.add(new Player(50000, this.deck));
         }
     }
-
 
     // Game Play
     public void playBlackjack() {
