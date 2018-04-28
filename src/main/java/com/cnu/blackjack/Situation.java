@@ -20,8 +20,8 @@ public class Situation {
         }
     }
 
-    public static boolean check_bust(Player player) {
-        if (player.getScore() > 21) {
+    public static boolean check_bust(Person person) {
+        if (person.getScore() > 21) {
             return true;
         }
         else {

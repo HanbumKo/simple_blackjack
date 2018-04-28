@@ -58,4 +58,13 @@ public class SituationTest {
 
         assertTrue(Situation.check_bust(player) == true);
     }
+
+    @Test
+    public void 딜러의_카드_합이_21보다_크면_플레이어는_bust이다() {
+        dealer.getHand().getHandList().add(new Card(10, Suit.SPADE));
+        dealer.getHand().getHandList().add(new Card(10, Suit.SPADE));
+        dealer.getHand().getHandList().add(new Card(10, Suit.SPADE));
+
+        assertTrue(Situation.check_bust(dealer) == true);
+    }
 }
