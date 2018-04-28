@@ -28,6 +28,4 @@ public class DealerTest {
         dealer.getDealerHand().drawCard();
         dealer.showOneCard();
     }
-
-
 }

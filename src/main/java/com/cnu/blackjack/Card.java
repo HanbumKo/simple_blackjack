@@ -29,9 +29,9 @@ public class Card {
             case 8: return "Rank : 8";
             case 9: return "Rank : 9";
             case 10: return "Rank : 10";
-            case 11: return "Rank : 11";
-            case 12: return "Rank : 12";
-            case 13: return "Rank : 13";
+            case 11: return "Rank : J";
+            case 12: return "Rank : Q";
+            case 13: return "Rank : K";
             default: return "-----There is no appropriate rank number-----";
         }
     }

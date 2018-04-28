@@ -18,11 +18,7 @@ public class Dealer {
     }
 
     public int getScore() {
-        int score = 0;
-        for( int i=0 ; i<dealerHand.getCurrentHandSize() ; i++ ) {
-            score += dealerHand.getHandList().get(i).getRank();
-        }
-        return score;
+        return dealerHand.calculate_card_sum();
     }
 
     /*

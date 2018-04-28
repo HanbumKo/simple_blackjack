@@ -1,8 +1,6 @@
 package com.cnu.blackjack;
 
 import lombok.Data;
-import sun.jvm.hotspot.types.basic.BasicOopField;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +20,7 @@ public class Game {
         playerList = new ArrayList<>();
         dealer = new Dealer(this.deck);
         for( int i=1 ; i<=numberOfGamer ; i++ ) {
-            playerList.add(new Player(50000, deck));
+            playerList.add(new Player(50000, this.deck));
         }
     }
 

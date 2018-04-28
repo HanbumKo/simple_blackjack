@@ -27,12 +27,7 @@ public class Player {
     }
 
     public int getScore() {
-        int score = 0;
-
-        for( int i=0 ; i<playerHand.getCurrentHandSize() ; i++ ) {
-            score += playerHand.getHandList().get(i).getRank();
-        }
-        return score;
+        return playerHand.calculate_card_sum();
     }
 
     public void showAllCards() {
