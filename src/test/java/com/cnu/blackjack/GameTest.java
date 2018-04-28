@@ -7,6 +7,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class GameTest {
 
+    // Game setting
     @Test
     public void 게임을_기본으로_설정값은_플레이어_한명과_덱_한개이다() {
         Game game = new Game();
@@ -32,20 +33,12 @@ public class GameTest {
         assertTrue(numberOfGamer==2);
     }
 
+
+    // Game processing
     @Test
     public void 게임진행() {
         Game game = new Game();
         game.playBlackjack();
-    }
-
-    @Test
-    public void 플레이어가_HIT를_하면_카드를_한장받는다(){
-        Game game = new Game();
-        int numberOfGamer = game.getNumberOfGamer();
-        for(int i = 0; i < numberOfGamer; i++ ) {
-            int HitOrStand = 1;
-            game.askPlayerHitOrStand(i, HitOrStand);
-        }
     }
 
 }
