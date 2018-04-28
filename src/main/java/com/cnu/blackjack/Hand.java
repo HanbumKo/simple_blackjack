@@ -24,4 +24,8 @@ public class Hand {
     public int getCurrentHandSize() {
         return handList.size();
     }
+
+    public int calculate_card_sum() {
+        return Calculator.card_sum(handList);
+    }
 }

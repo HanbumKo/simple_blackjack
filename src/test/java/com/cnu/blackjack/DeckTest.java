@@ -53,5 +53,4 @@ public class DeckTest {
         int card3rank = card3.getRank();
         assertTrue( (card2rank-card1rank!=1) && (card3rank-card2rank)!=1 );
     }
-
 }

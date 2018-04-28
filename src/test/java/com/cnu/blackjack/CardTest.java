@@ -61,5 +61,4 @@ public class CardTest {
         String stringOfCard1 = card1.getSuitToString();
         assertTrue(stringOfCard1 instanceof String);
     }
-
 }

@@ -27,4 +27,9 @@ public class GameTest {
         Game game = new Game(3, 2);
         game.playBlackjack();
     }
+
+    @Test
+    public void 플레이어1의_턴이_끝나면_플레이어2의_턴으로_넘어간다() {
+
+    }
 }
