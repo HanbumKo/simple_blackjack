@@ -40,7 +40,7 @@ public class SituationTest {
     }
 
     @Test
-    public void 플레이어의_카드_합이_딜러의_카드_합이_같으면_비긴다() {
+    public void 플레이어의_카드_합과_딜러의_카드_합이_같으면_비긴다() {
         dealer.getDealerHand().getHandList().add(new Card(10, Suit.SPADE));
         dealer.getDealerHand().getHandList().add(new Card(10, Suit.SPADE));
 
@@ -48,5 +48,14 @@ public class SituationTest {
         player.getPlayerHand().getHandList().add(new Card(10, Suit.SPADE));
 
         assertTrue(Situation.who_win(dealer, player) == Situation.result.DRAW);
+    }
+
+    @Test
+    public void 플레이어의_카드_합이_21보다_크면_플레이어는_bust이다() {
+        player.getPlayerHand().getHandList().add(new Card(10, Suit.SPADE));
+        player.getPlayerHand().getHandList().add(new Card(10, Suit.SPADE));
+        player.getPlayerHand().getHandList().add(new Card(10, Suit.SPADE));
+
+        assertTrue(Situation.check_bust(player) == true);
     }
 }

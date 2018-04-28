@@ -1,6 +1,7 @@
 package com.cnu.blackjack;
 
 public class Situation {
+
     enum result {
         DEALER_WIN,
         PLAYER_WIN,
@@ -16,6 +17,15 @@ public class Situation {
         }
         else {
             return result.DRAW;
+        }
+    }
+
+    public static boolean check_bust(Player player) {
+        if (player.getScore() > 21) {
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }
