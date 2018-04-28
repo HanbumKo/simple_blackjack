@@ -70,31 +70,31 @@ public class Game {
 
     // private methods
     private void dealerGetTwoCard() {
-        dealer.getDealerHand().drawCard();
-        dealer.getDealerHand().drawCard();
+        dealer.getHand().drawCard();
+        dealer.getHand().drawCard();
     }
 
     private void dealerGetOneCard() {
-        dealer.getDealerHand().drawCard();
+        dealer.getHand().drawCard();
     }
 
     private void playersGetTwoCard() {
         for( int i=0 ; i<numberOfGamer ; i++ ) {
-            playerList.get(i).getPlayerHand().drawCard();
-            playerList.get(i).getPlayerHand().drawCard();
+            playerList.get(i).getHand().drawCard();
+            playerList.get(i).getHand().drawCard();
         }
     }
 
     private void playerGetOneCard() {
         for( int i=0 ; i<numberOfGamer ; i++ ) {
-            playerList.get(i).getPlayerHand().drawCard();
+            playerList.get(i).getHand().drawCard();
         }
     }
 
     private void dealerShowOneCard() {
         System.out.println("dealer has : ");
         dealer.showOneCard();
-        for( int i=1 ; i<dealer.getDealerHand().getCurrentHandSize() ; i++ ) {
+        for( int i=1 ; i<dealer.getHand().getCurrentHandSize() ; i++ ) {
             System.out.println("[Invisible Card]");
         }
         System.out.println("_______________________________________");

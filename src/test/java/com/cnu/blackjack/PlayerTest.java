@@ -50,7 +50,7 @@ public class PlayerTest {
     public void 플레이어는_hit을_하면_카드개수가_1장이_늘어난다() {
         Player player = new Player(5000, new Deck(1)); // 새로 만들어진 플레이어는 0장의 카드를 가짐
         player.hit();
-        int numberOfCard = player.getPlayerHand().getHandList().size();
+        int numberOfCard = player.getHand().getHandList().size();
         assertTrue(numberOfCard == 1);
     }
 
