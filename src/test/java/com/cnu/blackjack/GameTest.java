@@ -37,4 +37,15 @@ public class GameTest {
         Game game = new Game();
         game.playBlackjack();
     }
+
+    @Test
+    public void 플레이어가_HIT를_하면_카드를_한장받는다(){
+        Game game = new Game();
+        int numberOfGamer = game.getNumberOfGamer();
+        for(int i = 0; i < numberOfGamer; i++ ) {
+            int HitOrStand = 1;
+            game.askPlayerHitOrStand(i, HitOrStand);
+        }
+    }
+
 }
