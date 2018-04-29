@@ -1,6 +1,7 @@
 package com.cnu.blackjack;
 
 
+import com.cnu.blackjack.exception.NoBalanceException;
 import com.cnu.blackjack.exception.NoEnoughBalanceException;
 import lombok.Data;
 
@@ -19,6 +20,9 @@ public class Player {
     }
 
     public void placeBet(int bet) {
+        if(balance <= 0){
+            throw new NoBalanceException();
+        }
         if( bet > balance ) {
             throw new NoEnoughBalanceException();
         }

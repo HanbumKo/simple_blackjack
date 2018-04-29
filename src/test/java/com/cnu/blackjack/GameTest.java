@@ -17,11 +17,16 @@ public class GameTest {
     @Test
     public void 게임인원을_플레이어리스트에_추가할수있다() {
         Game game = new Game(3, 2);
-        game.addGamer();
+        game.addGamer(50000);
         int numberOfGamer = game.getNumberOfGamer();
         assertTrue(numberOfGamer==4);
     }
-
+    @Test
+    public void 게임인원의_돈이없으면_참가할수없다() {
+        Game game = new Game(3, 2);
+        game.addGamer(0);
+        assertTrue(game.getNumberOfGamer()==4);
+    }
     @Test
     public void 게임진행() {
         Game game = new Game(3, 2);

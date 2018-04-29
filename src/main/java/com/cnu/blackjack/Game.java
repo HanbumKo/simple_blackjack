@@ -1,7 +1,7 @@
 package com.cnu.blackjack;
 
 import lombok.Data;
-import sun.jvm.hotspot.types.basic.BasicOopField;
+//import sun.jvm.hotspot.types.basic.BasicOopField;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,9 +54,9 @@ public class Game {
     }
 
     // public methods
-    public Boolean addGamer() {
+    public Boolean addGamer(int balance) {
         numberOfGamer++;
-        return playerList.add(new Player(50000, deck));
+        return playerList.add(new Player(balance, deck));
     }
 
     // private methods

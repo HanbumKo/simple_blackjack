@@ -32,6 +32,12 @@ public class PlayerTest {
     }
 
     @Test
+    public void 플레이어는_가진돈이_0보다_많아야한다(){
+        Deck deck = new Deck(2);
+        Player player = new Player(-1, deck);
+        player.placeBet(-1);
+    }
+    @Test
     public void 플레이어는_스코어를_계산할수있다() {
         Deck deck = new Deck(2);
         Player player = new Player(5000, deck);
